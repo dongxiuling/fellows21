@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div1{
+            color: #f00;
+        }
+        .aa{
+            color: #0f0;
+        }
+        .bb{
+            background: #f00;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    !important
+    style
+    id
+    class   class="aa bb cc"后边优先级高
+    标签选择器
+    * 通配符
+    元素自带的 body=> margin: 8px;
+
+    style  1000
+    id     100
+    class 伪类  10
+    标签    1
+
+    .a .b .c. .d     .x 110
+    #x 100
+
+
+    <div id="div1" class="aa" style="color: #00f">
+        cvhnjm,.
+    </div>
+    <div  class="aa bb cc" >
+        cvhnjm,.
+    </div>
+
+</body>
+</html>
