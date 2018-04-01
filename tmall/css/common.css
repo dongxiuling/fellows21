@@ -104,6 +104,12 @@ a{
     .sub-menu-item a{
         color: #999;
     }
+    .nav-icon{
+        color: #ff0036;
+        font-size: 14px;
+    }
+
+
 
 
 /*nav结束*/

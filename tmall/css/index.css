@@ -1,0 +1,31 @@
+.logo{
+    width: 240px;
+    height: 130px;
+    float: left;
+}
+.search-box{
+    float: left;
+    margin:38px 0 0 120px;
+}
+.search{
+    width: 625px;
+    height: 36px;
+    border:2px solid #ff0036;
+}
+.search-text{
+    width: 491px;
+    height: 36px;
+    border: none;
+    outline: none;/*去掉蓝边*/
+    float: left;
+}
+.search-btn{
+    width: 134px;
+    height: 36px;
+    border:none;
+    background: #ff0036;
+    float: left;
+    font-size: 18px;
+    color: #fff;
+
+}
