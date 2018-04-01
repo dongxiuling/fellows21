@@ -59,14 +59,18 @@ a{
     }
     .sn-menu:hover{
          background: #fff;
+         height: 33px;
      }
+    .sn-menu:hover .sub-sn-menu{
+        display: block;
+    }
     .sn-menu a:hover{
         color: #FF0036;
         text-decoration: underline;
     }
     .sn-menu:hover::after{
         transform: rotate(180deg);
-        top:13px;
+        /*top:13px;*/
     }
     .sn-menu::after{
         content: '';
@@ -79,6 +83,26 @@ a{
         right: 6px;
         top: 16px;
         transition:all 0.1s linear ;
+        transform-origin: 3px 1.5px;
+    }
+    .sub-sn-menu{
+        background: #fff;
+        border:1px solid #eee;
+        border-top:none;
+        padding: 10px 8px;
+        position: absolute;
+        left:-1px;
+        top:33px;
+        width: 74px;
+        display: none;
+
+    }
+    .sub-menu-item{
+        line-height: 18px;
+        height: 18px;
+    }
+    .sub-menu-item a{
+        color: #999;
     }
 
 
