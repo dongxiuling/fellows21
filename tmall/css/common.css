@@ -95,7 +95,9 @@ a{
         top:33px;
         width: 74px;
         display: none;
-
+        /*height: 300px;*/
+        background: #fff;
+        z-index:1;
     }
     .sub-menu-item{
         line-height: 18px;
