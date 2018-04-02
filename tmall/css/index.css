@@ -1,3 +1,7 @@
+/*search start*/
+.search-wrap{
+    overflow: hidden;
+}
 .logo{
     width: 240px;
     height: 130px;
@@ -29,3 +33,64 @@
     color: #fff;
 
 }
+.under-search{
+    margin-top:5px;
+    margin-left:-12px;
+}
+.under-search li{
+    float: left;
+    padding: 0 12px;
+    /*border-right: 1px solid #;*/
+    position: relative;
+}
+.under-search li.under-search-hot a{
+    color: #FF0036;
+}
+.under-search li a{
+    color: #999;
+    font-size: 14px;
+}
+.under-search li span{
+    width: 1px;
+    height: 14px;
+    background: #999999;
+    position: absolute;
+    right: 0px;
+    top:4px;
+}
+/*search end*/
+
+
+/*menu*/
+
+.menu-box{
+    height: 35px;
+    border-bottom: 2px solid #FF0036;
+}
+.menu-list{
+    margin-left: 200px;
+}
+.menu-list li{
+    float: left;
+    height: 36px;
+    line-height: 36px;
+}
+.menu-list img{
+    width: 100px;
+    margin-top:3px;
+    /*vertical-align: middle;*/
+}
+.menu-list a{
+    color: #333;
+    font-size: 16px;
+    display: block;
+    padding: 0 8px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
