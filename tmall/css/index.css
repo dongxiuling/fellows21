@@ -88,6 +88,35 @@
     font-weight: 500;
 }
 
+/*轮播图*/
+.slide-box{
+    position: relative;
+}
+.slide-item{
+    position: absolute;
+    left:0px;
+    top:0px;
+    width: 100%;
+}
+.slide-item1{
+    background: #fee9ec;
+
+}
+.slide-item2{
+    background: #aa632c;
+
+}
+.slide-item-link{
+    width: 1230px;
+    display: block;
+    margin: 0 auto;
+}
+.slide-item-link img{
+    width: 1230px;
+    height: 500px;
+}
+
+
 
 
 
