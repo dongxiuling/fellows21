@@ -259,4 +259,104 @@
 }
 /*brand-list 结束*/
 
+/*tmall-mart 结束*/
+.mart-wrapper{
+    margin-top: 20px;
+}
+.mart-head{
+    height: 31px;
+    line-height: 31px;
+    margin-bottom: 5px;
+}
+.mart-img{
+    width: 214px;
+    height: 25px;
+}
+.mart-head-list{
+    float: right;
+}
+.mart-head-list li{
+    float: left;
+}
+.mart-head-list li a{
+    color: #000;
+    font-size: 14px;
+    margin:5px 10px;
+    border-bottom:1px solid #f5f5f5;
+    padding-bottom:1px;
+}
+.mart-head-list li a:hover{
+    border-bottom: 1px solid #000;
+}
+.mart-body{
+    overflow: hidden;
+}
 
+.mart-left{
+    float: left;
+}
+.mart-left-img{
+    width: 235px;
+    height: 618px;
+}
+.mart-item{
+    margin-left: 13px;
+    background: #fff;
+}
+.mart-item-1{
+    padding: 10px;
+    width: 464px;
+    height: 281px;
+}
+.mart-right{
+    float: right;
+    background: #ff0000;
+    width: 995px;
+    height: 618px;
+}
+.mart-item-shadow{
+    box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.9) ;
+    overflow: hidden;
+}
+.mart-btns{
+    overflow: hidden;
+}
+.mart-btns span{
+    float: left;
+    width: 50%;
+    height: 57px;
+    line-height: 57px;
+    text-align: center;
+    background: #f1f1f1;
+    font-size: 18px;
+}
+.mart-btns span.active{
+    background: #00b262;
+    color: #fff;
+}
+.mart-content{
+    height: 225px;
+}
+.mart-content-item img{
+    width: 200px;
+    height: 200px;
+    float: right;
+    margin-top:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*tmall-mart 结束*/
