@@ -360,7 +360,6 @@
     position: absolute;
     left:0px;
     bottom:52px;
-
 }
 .mart-word-title{
     font-size: 24px;
@@ -381,14 +380,12 @@
     font-size: 20px;
     margin-left:26px;
 }
-
 .mart-item-2{
     width: 234px;
     height: 302px;
     background: #ffffff;
     text-align: center;
     border: 1px solid #fff;
-
 }
 .mart-item-2:hover{
     border:1px solid #FF0036;
@@ -397,7 +394,6 @@
     width: 185px;
     height: 185px;
     margin-top:20px;
-
 }
 .mart-pro-desc{
     width: 135px;
@@ -412,18 +408,14 @@
     color: #FF0036;
     font-size: 18px;
     margin-top:3px;
-
 }
-
 .mart-item{
     float: left;
     margin-left:13px;
     margin-bottom: 11px;
-
 }
 .mart-item:hover .mart-item-img,.mart-item:hover .mart-pro-img{
     opacity:0.7;
-
 }
 .mart-item-5{
     margin-left: 12px;
