@@ -163,7 +163,7 @@
 
 /*brand 开始*/
 .tmall-content{
-    background: #cccccc;
+    background: #f5f5f5;
     /*border:1px solid transparent;*/
     padding-top: 32px;
 }
@@ -310,12 +310,12 @@
 }
 .mart-right{
     float: right;
-    background: #ff0000;
+    background: #f5f5f5;
     width: 995px;
     height: 618px;
 }
 .mart-item-shadow{
-    box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.9) ;
+    box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.09) ;
     overflow: hidden;
 }
 .mart-btns{
@@ -336,18 +336,98 @@
 }
 .mart-content{
     height: 225px;
+    /*background: #0000ff;*/
 }
-.mart-content-item img{
+.mart-content-item{
+    height:225px;
+    position: relative;
+    display: none;
+}
+.mart-active{
+    display: block;
+}
+.mart-content-item .mart-item-img{
     width: 200px;
     height: 200px;
     float: right;
     margin-top:10px;
 }
+.mart-item-word{
+    width: 291px;
+    height: 87px;
+    background: url("../images/mart-bg.png") 0 0 no-repeat;
+    /*background-size:291px 87px ;*/
+    position: absolute;
+    left:0px;
+    bottom:52px;
 
+}
+.mart-word-title{
+    font-size: 24px;
+    font-weight: 700;
+    color: #00B262;
+    margin-left:26px;
+    height: 40px;
+    line-height: 40px;
+}
+.mart-word-title-img{
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.mart-word-title-txt{
+    vertical-align: middle;
+}
+.mart-word-desc{
+    font-size: 20px;
+    margin-left:26px;
+}
 
+.mart-item-2{
+    width: 234px;
+    height: 302px;
+    background: #ffffff;
+    text-align: center;
+    border: 1px solid #fff;
 
+}
+.mart-item-2:hover{
+    border:1px solid #FF0036;
+}
+.mart-pro-img{
+    width: 185px;
+    height: 185px;
+    margin-top:20px;
 
+}
+.mart-pro-desc{
+    width: 135px;
+    margin:0 auto;
+    overflow: hidden;
+    line-height: 20px;
+    height: 40px;
+    font-size: 14px;
+    color: #333;
+}
+.mart-pro-price{
+    color: #FF0036;
+    font-size: 18px;
+    margin-top:3px;
 
+}
+
+.mart-item{
+    float: left;
+    margin-left:13px;
+    margin-bottom: 11px;
+
+}
+.mart-item:hover .mart-item-img,.mart-item:hover .mart-pro-img{
+    opacity:0.7;
+
+}
+.mart-item-5{
+    margin-left: 12px;
+}
 
 
 
