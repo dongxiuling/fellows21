@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="div1">dfgh</div>
+<script>
+/*
+*    基本数据类型： number string boolean null undefined
+*    引用数据类型：array  object
+*
+*
+*
+*
+* */
+   /* var a = 5;
+    var b = a;
+    a = 10;
+    console.log(b);*/
+/*
+    var person1 = {
+        name : "zhangsan",
+        age:18
+    }
+    var person2 = person1;
+
+    person1.name = 'lisi';
+
+    console.log(person2.name);*/
+/*
+ var person1 = {
+ name : "zhangsan",
+ age:18
+ };
+
+ var person2 = {};
+ person2.name = person1.name;
+ person2.age = person1.age;
+
+ person1.name = 'lisi';
+ console.log(person2);*/
+
+
+/*    var arr1 = [1,2,3];
+    var arr2 = arr1;
+
+    arr1[0] = 8;
+
+    console.log(arr2);
+
+
+console.log(document.getElementById('div3'));*/
+
+   /* function aa(){
+        console.log('aaa');
+    }
+
+    console.log(typeof aa);*/
+
+  /*  var obj = {
+        name:'zhangsan'
+    };
+    var arr = [1,2,3];*/
+
+//    console.log(typeof arr);
+
+//    console.log(arr instanceof Array);
+
+//    typeof "string" "number" "boolean" "object" "undefined" "function";
+
+ /*   console.log(undefined == null);
+    console.log(undefined === null);
+
+    console.log(3 === '3');*/
+   /*
+   ===值&类型
+   ==值
+   */
+
+/*var num=020;  // 2*8+0 0开头8进制
+var num1 = 0x12;  //  1*16+2 = 18  0x 16进制
+
+    console.log(num1);*/
+
+//    console.log(!!NaN);
+//    console.log(!5);
+
+//    console.log(NaN == NaN);
+  /*  'ab'-5
+    'x'/2*/
+   /* var num = 10;*/
+   /* console.log(num.toString());*/
+
+  /*  console.log(parseInt(1.23));
+
+    parseInt('22a'); //22*/
+   /* aa();
+    bb();
+
+
+    function aa(){
+
+    };
+
+    var bb = function(){
+
+    };*/
+
+  /*  function fnTest() {
+ return "value";//使用return来返回值
+
+ alert("Hello!!!");//执行了return之后，函数就会退出
+ }
+
+ var x = fnTest();
+
+ console.log(x);
+ */
+
+function fnTest(arg1,arg2,arg3) {
+
+    console.log(arguments.callee); //[1,2,3,4];
+//    fnTest();
+    arguments.callee();
+
+//    alert(arg1+"\n"+arg2+"\n"+arg3);
+}
+//fnTest(1,2,3);
+fnTest(1,2,3,4);//没有传值过去时，就会是undefined
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

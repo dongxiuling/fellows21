@@ -26,7 +26,6 @@
      c = b;
      }
 
-
      console.log(c);*/
 
    /* var a = 'A';
@@ -108,19 +107,36 @@
     }*/
 
 //    aa();
-    bb();  /*函数提升*/
+   /* bb();  /!*函数提升*!/
 
     function bb(){
-        console.log('heheh');
-    }
+    console.log('heheh');
+    }*/
 //    bb();
     /*var a;
     console.log(a);
 
     var a = 5;  //变量提升*/
 //    var a;
-    console.log(a);
-    var a = 4;
+    /*console.log(a);
+    var a = 4;*/
+
+
+    function add(x,y){
+        //局部变量
+        var z = x+y;
+//        return z;
+//        默认返回undefined;
+    }
+
+    var aaa = add(2,3);
+
+    console.log(add(2,3));
+
+//    console.log(z);
+
+
+
 
 
 
