@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+    var arr1 = [1,2];
+    var arr2 = [3,4];
+    var arr3= arr1.concat(arr2);
+    console.log(arr3);
+
+
+    var str = arr3.join(':');
+
+    console.log(str);//'1,2,3,4'
+
+    var x = arr1.pop();
+
+    console.log(arr1,x);
+
+
+    var arr4 = ["10","5","40","25","1000","1"];
+
+    console.log(arr4.sort(function(a,b){
+        return a-b;
+    }));
+
+    var arr5 = [1,2,3,4,5];
+//    arr5.splice(1,2);
+
+//    arr5.splice(3,0,666);
+    arr5.splice(2,2,666);
+
+    console.log(arr5);
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
