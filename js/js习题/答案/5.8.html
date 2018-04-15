@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+    function fn(n){
+        return Math.pow(-1,n-1)/(2*n - 1)
+    }
+   /* var sum = 0;
+    for(var i=1; i<=n; i++){
+        sum += pi(i);
+    }*/
+
+    function pi(n){
+        var sum = 0;
+        for(var i=1; i<=n; i++){
+            sum += fn(i);
+        }
+        return sum*4;
+    }
+
+    console.log(pi(1000));
+    console.log(pi(10));
+
+
+
+
+
+</script>
+
+</body>
+</html>
