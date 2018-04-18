@@ -37,28 +37,17 @@
         var oBtn = document.getElementById('btn');
 
         oBtn.onclick = function(){
-            window.scrollTo(0,0);
-//            console.log('hahah');
-
-//            1800
             ///document.documentElement => html
-
-
+            //获取滚动条距离上边的高度
             var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
-
-            setInterval(function(){
+            var timer = setInterval(function(){
                 scrollTop -= 20;
                 window.scrollTo(0,scrollTop);
+                if(scrollTop <= 0){
+                    clearInterval(timer);
+                }
             },20);
-
-
-
-
         }
-
-
-
-
     </script>
 
 </body>
