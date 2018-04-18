@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height:2000px;
+        }
+        #btn{
+            width: 34px;
+            height: 66px;
+            background: url(go-top.jpeg) -22px -5px no-repeat;
+            position: fixed;
+            right: 30px;
+            bottom:50px;
+        }
+        #btn:hover{
+            background-position: -113px -4px;
+        }
+    </style>
+</head>
+<body>
+    fghfghj
+    <p>fghljkhjj</p>
+    <p>fghljkhjj</p><p>fghljkhjj</p>
+    <p>fghljkhjj</p>
+
+    <a id="btn" href="javascript:;"></a>
+
+    <script>
+
+        var oBtn = document.getElementById('btn');
+
+        oBtn.onclick = function(){
+            window.scrollTo(0,0);
+//            console.log('hahah');
+
+//            1800
+            ///document.documentElement => html
+
+
+            var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
+
+            setInterval(function(){
+                scrollTop -= 20;
+                window.scrollTo(0,scrollTop);
+            },20);
+
+
+
+
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>

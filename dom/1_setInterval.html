@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+    var num = 0;
+    var timer = setInterval(function(){
+        num++;
+        console.log(Math.random());
+        if(num == 10){
+            clearInterval(timer);
+        }
+    },1000);
+
+
+    var timer1 = setInterval(function(){
+        console.log('xcsdf');
+    },1000);
+
+    clearInterval(timer1);
+
+    //只执行一次
+    var timer2 = setTimeout(function(){
+        console.log('haha');
+    },1000);
+
+    clearTimeout(timer2);
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
