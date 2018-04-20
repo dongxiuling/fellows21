@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--<style>
+        div{
+            background: red;;
+        }
+    </style>-->
+    <!--<link rel="stylesheet" href="style.css"/>-->
+    <style>
+        #div1{
+            color:red;
+        }
+        .aa{
+            background: pink;
+        }
+        span{
+            background: red;
+        }
+        #ul1 li{
+            background: blue;
+        }
+        #ul1,#div1{
+            background: #0000ff;
+        }
+        a:hover{
+            color: #ff0000;
+        }
+        #div1::before{
+            content: 'haha';
+            background: green;
+        }
+        #div3+div{
+            background: #ff0000;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        内联样式 <div style="background: red;">
+        内部样式
+        外部样式
+    -->
+    <!--css选择器
+        id选择器 #div1
+        标签选择器p  div
+        后代选择器 #ul1 .aa
+        子代选择器 #ul1>li
+        分组选择器  #ul1,#div1
+    -->
+    <div id="div1">
+        jk;l'kjghfdfhg
+    </div>
+    <ul id="ul1">
+        <li class="aa"><span>001</span></li>
+        <li class="aa">002</li>
+        <li>003</li>
+        <li class="aa">004
+            <ul>
+                <li>aaa</li>
+                <li>bbb</li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li class="aa"><span>001</span></li>
+        <li class="aa">002</li>
+        <li>003</li>
+        <li class="aa">004</li>
+    </ul>
+    <a href="#">xdgfchjklk;</a>
+
+    <div id="div3">fghjkl</div>
+    <div id="div4">fgchjvhkjl</div>
+
+
+</body>
+</html>
