@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #btn-box span{
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            background: #ff0000;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+        #btn-box span.btn-active{
+            background: deeppink;
+        }
+        #con-box div{
+            width: 400px;
+            height: 200px;
+            background: #00ff00;
+            display: none;
+        }
+        #con-box div.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="btn-box">
+            <span class="btn-active">111</span>
+            <span>222</span>
+            <span>333</span>
+        </div>
+        <div id="con-box">
+            <div class="active">aaa</div>
+            <div>bbb</div>
+            <div>ccc</div>
+        </div>
+    </div>
+    <script>
+        /*
+        * 定义变量 没有赋值
+        * 函数参数和没有传，形参undefined
+        * obj.school  访问对象下没有的属性
+        * arr[10] 访问数组中没有的下标
+        * */
+        var oBtnBox = document.getElementById('btn-box');
+        var aBtn = oBtnBox.getElementsByTagName('span');
+
+        for(var i=0; i<aBtn.length; i++){  //3
+            aBtn[i].onclick = function(){
+//                console.log(aBtn[i]);
+                for(var j=0; j<aBtn.length; j++){
+                    aBtn[j].className = '';
+                }
+                //this 对当前对象的引用
+                this.className = 'btn-active';
+            }
+        }
+
+
+
+    </script>
+
+
+
+</body>
+</html>
