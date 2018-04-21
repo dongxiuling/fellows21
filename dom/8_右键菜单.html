@@ -14,6 +14,7 @@
             border-radius: 10px;
             list-style: none;
             display: none;
+            position: absolute;
         }
         li{
             height: 30px;
@@ -37,8 +38,36 @@
         <li>删除</li>
     </ul>
 
+    <!--oncontextmenu  e.clientX   e.clientY-->
 
-    oncontextmenu
+    <script>
+        var oUl1 = document.getElementById('ul1');
+        document.oncontextmenu = function (e) {
+            oUl1.style.display = 'block';
+            var left = e.clientX;
+            var top = e.clientY;
+
+            oUl1.style.left = left+"px";
+            oUl1.style.top = top +"px";
+
+            //阻止默认行为
+            return false;
+        }
+        var aLi = document.getElementsByTagName('li');
+        for(var i=0; i<aLi.length; i++){
+            aLi[i].onclick = function(){
+                console.log(this.innerHTML);
+                oUl1.style.display = 'none';
+            }
+        }
+
+        document.onclick = function(){
+            oUl1.style.display = 'none';
+        }
+
+
+        
+    </script>
 
 </body>
 </html>
