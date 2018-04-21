@@ -47,7 +47,7 @@
         * obj.school  访问对象下没有的属性
         * arr[10] 访问数组中没有的下标
         * */
-        var oBtnBox = document.getElementById('btn-box');
+       /* var oBtnBox = document.getElementById('btn-box');
         //按钮
         var aBtn = oBtnBox.getElementsByTagName('span');
         var oConBox = document.getElementById('con-box');
@@ -69,7 +69,32 @@
                 //找到和按钮对应的div  让当前的div显示
                 aCon[index].className = 'active';
             }
+        }*/
+
+
+        var oBtnBox = document.getElementById('btn-box');
+        var aBtn = oBtnBox.getElementsByTagName('span');
+
+        var oConBox = document.getElementById('con-box');
+        var aDiv = oConBox.getElementsByTagName('div');
+
+        for(var i=0; i<aBtn.length; i++){
+            aBtn[i].index = i;//
+            aBtn[i].onclick = function () {
+                for(var j =0; j<aBtn.length; j++){
+                    aBtn[j].className = '';
+                    aDiv[j].className = '';
+                }
+                //this 对当前对象的引用
+                this.className = 'btn-active';
+                //当前点击span的索引
+                var idx = this.index;
+                aDiv[idx].className = 'active';
+            }
         }
+
+
+
 
 
 

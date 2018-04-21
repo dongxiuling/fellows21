@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="div1">dfghjk</div>
+    <ul id="ul1">
+        <li class="bb">01</li>
+        <li class="aa">02</li>
+        <li>03</li>
+        <li class="aa">04</li>
+    </ul>
+    <ul>
+        <li class="bb">01</li>
+        <li class="aa">02</li>
+        <li>03</li>
+        <li class="aa">04</li>
+    </ul>
+
+    <input type="text" name="username"/>
+<script>
+    var oDiv = document.getElementById('div1');
+    //返回dom对象  没有返回null
+
+
+    var aLi = document.getElementsByTagName('li');
+    //返回数组 没有返回空数组
+
+    var a = document.getElementsByClassName('aa');
+    //返回数组 没有返回空数组
+
+    var aInput = document.getElementsByName('username');
+
+    //返回数组 没有返回空数组
+
+//    aInput[0];
+
+    var oUl = document.getElementById('ul1');
+    var aLi = oUl.getElementsByTagName('li');
+
+
+    function getEleByClass(clsName,context){
+        var result = [];
+        /*if(!context){
+         context = document;
+         }*/
+        context = context || document;
+        var aEle = context.getElementsByTagName('*');
+        for(var i=0;i<aEle.length; i++ ){
+//              "bb aa cc" == "aa"
+            var str = aEle[i].className;
+            var arr = str.split(' '); //['bb','aa','cc']
+            for(var j=0; j<arr.length; j++){
+                if(arr[j] == clsName){
+                    result.push(aEle[i]);
+                }
+            }
+        }
+        return result;
+    }
+
+
+    getEleByClass('bb');
+    var oUl1 = document.getElementById('ul1');
+
+    getEleByClass('bb',oUl1);
+
+</script>
+
+</body>
+</html>
