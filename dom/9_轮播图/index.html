@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #container{
+            width: 750px;
+            height: 291px;
+            margin:50px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        #img-box{
+            width: 3750px;
+            overflow: hidden;
+        }
+        #img-box a{
+            float: left;
+        }
+        #btn-box{
+            position: absolute;
+            right:10px;
+            bottom:10px;
+        }
+        #btn-box li,#arrow-box span{
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            background: rgba(0,0,0,0.5);
+            float: left;
+            margin-right:5px;
+            border-radius: 5px;
+            text-align: center;
+            color: #fff;
+            font-size: 12px;
+        }
+        #arrow-box{
+            position: absolute;
+            left:10px;
+            bottom:10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="img-box">
+            <a href="#">
+                <img src="img/1.jpg" alt=""/>
+            </a>
+            <a href="#">
+                <img src="img/2.jpg" alt=""/>
+            </a>
+            <a href="#">
+                <img src="img/3.jpg" alt=""/>
+            </a>
+            <a href="#">
+                <img src="img/4.jpg" alt=""/>
+            </a>
+            <a href="#">
+                <img src="img/5.jpg" alt=""/>
+            </a>
+
+
+        </div>
+        <ul id="btn-box">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <div id="arrow-box">
+            <span>&lt;</span>
+            <span>&gt;</span>
+        </div>
+    </div>
+
+</body>
+</html>
