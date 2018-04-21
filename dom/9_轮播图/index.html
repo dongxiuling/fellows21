@@ -21,6 +21,10 @@
         #img-box{
             width: 3750px;
             overflow: hidden;
+            position: absolute;
+            left:0px;
+            top:0px;
+            transition: left 0.5s linear;
         }
         #img-box a{
             float: left;
@@ -41,6 +45,10 @@
             text-align: center;
             color: #fff;
             font-size: 12px;
+            cursor: pointer;
+        }
+        #btn-box li.selected{
+            background: orangered;
         }
         #arrow-box{
             position: absolute;
@@ -73,17 +81,86 @@
 
         </div>
         <ul id="btn-box">
-            <li>1</li>
+            <li class="selected">1</li>
             <li>2</li>
             <li>3</li>
             <li>4</li>
             <li>5</li>
         </ul>
         <div id="arrow-box">
-            <span>&lt;</span>
-            <span>&gt;</span>
+            <span id="prev">&lt;</span>
+            <span id="next">&gt;</span>
         </div>
     </div>
 
+    <script>
+        var oContainer = document.getElementById('container');
+        var oBtnBox = document.getElementById('btn-box');
+        var aBtn = oBtnBox.getElementsByTagName('li');
+        var oImgBox = document.getElementById('img-box');
+        var oNext = document.getElementById('next');
+        var oPrev = document.getElementById('prev');
+        var count = 0;
+        var timer;
+
+       /*点击按钮的索引：  0  1       2       3        i
+         div挪动的left值：0  -1*img  -2*img  -3*img   -i*img
+
+         */
+        for(var i=0; i<aBtn.length; i++){  //i=5
+            aBtn[i].index = i;
+            aBtn[i].onclick = function(){
+                //点击事件中i=5
+                change(this.index);
+                count = this.index;
+            }
+        }
+        oNext.onclick = function(){
+            count++;
+            if(count == aBtn.length){
+                count = 0;
+            }
+            change(count);
+        };
+        oPrev.onclick = function(){
+            count--;
+            if(count == -1){
+                count = aBtn.length-1;
+            }
+            change(count);
+        };
+
+        function change(idx){
+            for(var j=0; j<aBtn.length; j++){
+                aBtn[j].className = '';
+            }
+            // this.className = 'selected';
+            aBtn[idx].className = 'selected';
+
+            oImgBox.style.left = -idx * 750+"px";
+        };
+
+        run();
+
+        oContainer.onmouseover = function(){
+            clearInterval(timer);
+        }
+
+        oContainer.onmouseout = function(){
+            run();
+        };
+        //开启定时器
+        function run(){
+            timer = setInterval(function(){
+                oNext.onclick();
+            },2000);
+        };
+
+
+
+
+
+
+    </script>
 </body>
 </html>
