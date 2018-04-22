@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #content{
+            width: 400px;
+            height: 200px;
+            border:1px solid #000;
+            margin:100px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        ul{
+            width: 520px;
+            overflow: hidden;
+            position: absolute;
+            left:0px;
+            top:0px;
+        }
+        li{
+            width: 120px;
+            height: 120px;
+            background: pink;
+            float: left;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 120px;
+            font-size: 40px;
+            color: #fff;
+        }
+        #btn{
+            /*margin-top:15px;*/
+            margin:135px auto 0;
+            width: 210px;
+        }
+        #btn span{
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            background: palevioletred;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <ul id="img-box">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <div id="btn">
+            <span id="left">向左</span>
+            <span id="right">向右</span>
+        </div>
+    </div>
+    <script>
+
+        var oImgBox = document.getElementById('img-box');
+        var oLeft = document.getElementById('left');
+        var oRight = document.getElementById('right');
+        var speed = -3;
+        var timer;
+        oImgBox.innerHTML += oImgBox.innerHTML;
+        oImgBox.style.width = oImgBox.offsetWidth *2 +"px";
+        function run(){
+            timer = setInterval(function(){
+
+                if(oImgBox.offsetLeft <= -oImgBox.offsetWidth/2){
+                    oImgBox.style.left = 0;
+                }
+                if(oImgBox.offsetLeft > 0){
+                    oImgBox.style.left = -oImgBox.offsetWidth/2 +"px";
+                }
+                oImgBox.style.left = oImgBox.offsetLeft + speed +'px';
+            },20);
+        }
+        run();
+        oRight.onmouseover = function(){
+            speed = 3;
+        }
+        oLeft.onmouseover = function(){
+            speed = -3;
+        }
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #container{
+            width: 750px;
+            height: 291px;
+            margin:50px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        #img-box{
+            width: 3750px;
+            overflow: hidden;
+            position: absolute;
+            left:0px;
+            top:0px;
+            transition: left 0.5s linear;
+        }
+        #img-box a{
+            float: left;
+        }
+        #btn-box{
+            position: absolute;
+            right:10px;
+            bottom:10px;
+        }
+        #btn-box li,#arrow-box span{
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            background: rgba(0,0,0,0.5);
+            float: left;
+            margin-right:5px;
+            border-radius: 5px;
+            text-align: center;
+            color: #fff;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        #btn-box li.selected{
+            background: orangered;
+        }
+        #arrow-box{
+            position: absolute;
+            left:10px;
+            bottom:10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="img-box">
+            <a href="#">
+                <img src="img/1.jpg" alt=""/>
+            </a>
+            <a href="#">
+                <img src="img/2.jpg" alt=""/>
+            </a>
+            <a href="#">
+                <img src="img/3.jpg" alt=""/>
+            </a>
+            <a href="#">
+                <img src="img/4.jpg" alt=""/>
+            </a>
+            <a href="#">
+                <img src="img/5.jpg" alt=""/>
+            </a>
+
+
+        </div>
+        <ul id="btn-box">
+            <li class="selected">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <div id="arrow-box">
+            <span id="prev">&lt;</span>
+            <span id="next">&gt;</span>
+        </div>
+    </div>
+
+    <script>
+        var aBtnBox = document.getElementById('btn-box');
+        var aBtn = aBtnBox.getElementsByTagName('li');
+        var oImgBox = document.getElementById('img-box');
+        var oNext = document.getElementById('next');
+        var oPrev = document.getElementById('prev');
+        var oContainer = document.getElementById('container');
+        var count = 0;//记录当前显示的图片（按钮）的索引
+        var timer;
+
+        for(var i=0; i<aBtn.length; i++){
+            aBtn[i].index = i;
+            aBtn[i].onclick = function(){
+                change(this.index);
+//                count = this.index;
+            }
+        };
+        oNext.onclick = function(){
+            count++;
+            if(count == aBtn.length){
+                count = 0;
+            }
+            change(count);
+        };
+        oPrev.onclick = function(){
+            count--;
+            if(count == -1){
+                count = aBtn.length-1;
+            }
+            change(count);
+        };
+        function change(idx){
+            for(var j=0; j<aBtn.length; j++){
+                aBtn[j].className = '';
+            }
+            aBtn[idx].className = 'selected';
+            oImgBox.style.left = -idx*750+"px";
+        }
+        run();
+        oContainer.onmouseover = function(){
+            clearInterval(timer);
+        };
+        oContainer.onmouseout = function(){
+            run();
+        };
+        function run(){
+            timer = setInterval(function(){
+                oNext.onclick();
+            },2000);
+        };
+
+
+
+
+
+    </script>
+</body>
+</html>

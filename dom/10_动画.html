@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            padding: 20px;
+            border:5px solid #000;
+            margin: 100px 0px 0px 200px;
+        }
+        #div2{
+            width: 500px;
+            height: 500px;
+            background: #0000ff;
+            overflow: hidden;
+            margin:50px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div id="div2">
+    <div id="div1">
+
+    </div>
+</div>
+
+
+    <script>
+        /*
+        * oDiv.style.width 只能取到内联样式的属性
+        * */
+        var oDiv = document.getElementById('div1');
+//        console.log(oDiv.offsetWidth);  //oDiv.offsetHeight
+        console.log(oDiv.offsetLeft); //offsetTop
+        console.log(oDiv.offsetParent);
+        //offsetLeft相对于最近已定位的祖先元素  没有相对于body
+
+        oDiv.onmouseover = function(){
+         //            oDiv.style.width = '800px';
+         //            console.log(oDiv.style.width);
+         //            console.log(oDiv.offsetWidth);
+             var timer = setInterval(function () {
+                oDiv.style.width = oDiv.offsetWidth +20 +"px";
+                if(oDiv.offsetWidth >= 800){
+                    clearInterval(timer);
+                }
+             },30);
+
+         };
+
+
+//        oDiv.offsetHeight
+
+
+    </script>
+
+</body>
+</html>
