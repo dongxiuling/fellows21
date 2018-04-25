@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="div1">
+    container1
+</div>
+<div id="div2">
+    container2
+</div>
+<div id="div3">
+    container3
+</div>
+<div id="div4">
+    container4
+</div>
+<div id="div5">
+    container5
+</div>
+
+<script>
+    var oDiv1 = document.getElementById('div1');
+    var oDiv2 = document.getElementById('div2');
+    var oDiv3 = document.getElementById('div3');
+    var oDiv4 = document.getElementById('div4');
+    var oDiv5 = document.getElementById('div5');
+    var innerHTML = '我是window的html';
+    var events = {
+        innerHTML:'我是 events',
+        gethtml:function(){
+            console.log(this.innerHTML);
+        },
+        setFunction:function(){
+            return this.gethtml;
+        },
+        proxy:function(){
+            var self = this;
+            return function(){
+                self.gethtml();
+            }
+        }
+    };
+    oDiv1.onclick = events.gethtml;  //container1
+    oDiv2.onclick = events.setFunction();  //container2
+    oDiv3.onclick = events.proxy();//我是 events
+    /*function(){
+        self.gethtml();
+    }*/
+    oDiv4.onclick = function(){//我是window的html
+        window.setTimeout(events.setFunction(),0); //this指向window
+    }
+    oDiv5.onclick = function(){
+        window.setTimeout(events.proxy(),0);  //我是 events
+    };
+//    window.setTimeout(events.gethtml);  //我是window的html
+
+
+//点击事件中  this
+   // 1年多
+ 第一个? Person  因为p.constructor返回构造函数  所有对象下都有这个属性  指向构造函数
+
+    p instanceof Person 判断是否是构造函数的实例
+
+    指向构造函数的原型对象 Person.prototype
+
+
+
+ajax请求 把请求地址  图片地址   传给后台  然后后台有个成功回调函数
+
+    一般用 network
+
+
+    文件路径
+
+
+    中间是点击的时候大代码
+
+    一般断点调试的时候  可以在那个监测  执行下一步  或者进入一个函数
+
+    callstact作用域
+    scope作用域
+
+    用抓包工具  好像有个叫   fiddler  chars
+
+    看了点  里边
+
+    还有声明周期的那些
+
+
+    一个是计算属性 computer  通过数据计算来的
+
+    传参 父-》zi  prop
+    子
+    做了 一个项目 时间长 有点忘了
+
+    750
+
+    咱们用什么技术   可以问问 通过面试 他觉得你还有哪些需要学习的
+
+    之前时间长了 忘记了   还行 箭头函数 let  解构
+
+    初 谢谢 ~
+
+
+
+</script>
+</body>
+</html>

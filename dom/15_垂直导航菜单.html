@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #content{
+            width: 180px;
+            border:1px solid #000;
+        }
+        h2{
+            background: #000000;
+            color: #fff;
+        }
+        #content ul{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<ul id="content">
+    <li>
+        <h2 onselectstart="return false;">管理区</h2>
+        <ul class="sub-list">
+            <li>001</li>
+            <li>002</li>
+            <li>003</li>
+        </ul>
+    </li>
+    <li>
+        <h2>交流区</h2>
+        <ul class="sub-list">
+            <li>001</li>
+            <li>002</li>
+            <li>003</li>
+        </ul>
+
+    </li>
+</ul>
+<script>
+    var aH2 = document.getElementsByTagName('h2');
+    var aUl = document.getElementsByClassName('sub-list');
+//    var flag = false;//隐藏    true 显示
+    for(var i=0; i<aH2.length; i++){
+        aH2[i].index = i;
+        aH2[i].flag = false;
+        aH2[i].onclick = function(){
+            if(this.flag){
+                aUl[this.index].style.display = 'none';
+                this.flag = false;
+            }else{
+                aUl[this.index].style.display = 'block';
+                this.flag = true;
+            }
+        }
+    }
+
+
+
+
+</script>
+
+</body>
+</html>

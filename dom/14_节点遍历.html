@@ -9,25 +9,29 @@
         11111
     </div>
     <ul id="ul1">
-        <li id="li1">111</li>
-        <!--fghj-->
+        <li>111</li>
         <li>222</li>
         <li>333</li>
         <li>444</li>
     </ul>
 <script>
-    /*document.getElementById('')
+
+    /*dom选择器
+    document.getElementById('')
     document.getElementsByClassName('')
     document.getElementsByTagName('')
-    document.getElementsByName()*/
+    document.getElementsByName()
 
-//    var oDiv = document.querySelector('#div1');
+    var oDiv = document.querySelector('#div1');
+    var aLi = document.querySelectorAll('li'); //返回数组*/
 
-   /* var oUl = document.querySelector('li'); //返回dom对象， 如果有多个 返回第一个元素
-
-    var aLi = document.querySelectorAll('li'); //返回数组，
-    console.log(aLi);*/
-
+   /*   遍历节点
+   *    nextSibiling   nextElementSibiling
+   *    previousSibling  previousElementSibling
+   *    firstChild     firstElementChild
+   *    lastChild
+   *    childNodes   =>children所有浏览器都支持
+   * */
 //    console.log(oDiv.firstChild);
 
 //    var oUl = document.querySelector('#ul1');
@@ -35,20 +39,36 @@
 //    alert(oUl.firstElementChild); chrom li
 //    alert(oUl.firstChild);   ie li
 
-    var oLi = document.getElementById('li1');
-
-   /* console.log(oLi.nextSibling);  //li
-    console.log(oLi.nextElementSibling); //不支持nextElementSibling属性
-*/
+    /*var oLi = document.getElementById('li1');
 
     function next(elem){
         do{
             elem = elem.nextSibling;
-        }while(elem.nodeType != 1);
+        }while(elem && elem.nodeType != 1);//元素存在 并且不是元素节点 循环继续  否则只要有一个不满足 return
         return elem;
     }
 
-    console.log(next(oLi));
+    console.log(next(oLi));*/
+  /*  var oUl = document.getElementById('ul1');
+    /!*console.log(oUl.firstChild);*!/
+    function first(elem){
+        elem = elem.firstChild;
+        if(elem.nodeType !=1){
+            elem = next(elem);
+        }
+        return elem;
+    }
+    console.log(first(oUl));*/
+
+    var oUl = document.querySelector('#ul1');
+    console.log(oUl.children);
+
+
+
+
+
+
+
 
 
 
