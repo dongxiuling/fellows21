@@ -12,6 +12,8 @@
             width: 200px;
             height: 200px;
             background: #ff0000;
+            position: absolute;
+            left:0;
 
         }
 
@@ -24,14 +26,24 @@
     </div>
 
 
-
+<script src="jslib.js"></script>
 <script>
     /*
      * oDiv.style.width 只能取到内联样式的属性
      * */
     var oDiv = document.getElementById('div1');
+    oDiv.onclick = function(){
+        animate(oDiv,{
+            width:800,
+            left:200
+        },function(){
+            alert('ok');
+        });
+    };
 
-    oDiv.onmouseover = function(){
+
+
+    /*oDiv.onmouseover = function(){
         //            oDiv.style.width = '800px';
         //            console.log(oDiv.style.width);
         //            console.log(oDiv.offsetWidth);
@@ -44,8 +56,7 @@
                 }
             }, 30);
         }
-
-    };
+    };*/
 
 
     //        oDiv.offsetHeight
