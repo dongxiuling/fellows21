@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="div1">
+        11111
+    </div>
+    <ul id="ul1">
+        <li id="li1">111</li>
+        <!--fghj-->
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+    </ul>
+<script>
+    /*document.getElementById('')
+    document.getElementsByClassName('')
+    document.getElementsByTagName('')
+    document.getElementsByName()*/
+
+//    var oDiv = document.querySelector('#div1');
+
+   /* var oUl = document.querySelector('li'); //返回dom对象， 如果有多个 返回第一个元素
+
+    var aLi = document.querySelectorAll('li'); //返回数组，
+    console.log(aLi);*/
+
+//    console.log(oDiv.firstChild);
+
+//    var oUl = document.querySelector('#ul1');
+
+//    alert(oUl.firstElementChild); chrom li
+//    alert(oUl.firstChild);   ie li
+
+    var oLi = document.getElementById('li1');
+
+   /* console.log(oLi.nextSibling);  //li
+    console.log(oLi.nextElementSibling); //不支持nextElementSibling属性
+*/
+
+    function next(elem){
+        do{
+            elem = elem.nextSibling;
+        }while(elem.nodeType != 1);
+        return elem;
+    }
+
+    console.log(next(oLi));
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
