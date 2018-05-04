@@ -47,18 +47,6 @@
 <script>
     var aH2 = document.getElementsByTagName('h2');
     var aUl = document.getElementsByClassName('sub-list');
-    /*for(var i=0; i<aH2.length; i++){
-        aH2[i].index = i;
-        aH2[i].onclick = function(){
-            oUl = aUl[this.index];
-            if(oUl.style.display == 'none' || oUl.style.display == ''){
-                oUl.style.display = 'block';
-            }else{
-                oUl.style.display = 'none';
-            }
-        }
-    }*/
-
     for(var i=0; i<aH2.length; i++){
         aH2[i].onclick = function(){
             var oUl = next(this);
@@ -69,6 +57,7 @@
             }
         }
     }
+
     function next(elem){
         do{
             elem = elem.nextSibling;

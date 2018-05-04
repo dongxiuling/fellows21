@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <!--<div id="div1">-->
+        <!--aaa-->
+    <!--</div>-->
+    <ul id="ul1">
+        <li>111</li>
+        <li id="div1">222</li>
+    </ul>
+    <script>
+        var oDiv = document.getElementById('div1');
+//        console.log(oDiv.firstChild.nodeValue); //aaa
+//        console.log(oDiv.nodeValue); //null
+
+//        console.log(oDiv)
+//        alert(oDiv.nextSibling);
+
+        function next(elem){
+            do{
+                elem = elem.nextSibling;
+            }while(elem && elem.nodeType != 1);
+
+            return elem;
+        }
+        console.log(next(oDiv));
+
+
+
+
+
+    </script>
+</body>
+</html>

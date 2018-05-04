@@ -46,23 +46,22 @@
 </ul>
 <script>
     var aH2 = document.getElementsByTagName('h2');
-    var aUl = document.getElementsByClassName('sub-list');
-//    var flag = false;//隐藏    true 显示
+    var oContent = document.getElementById('content');
+    var aUl = oContent.getElementsByTagName('ul');
+
+
     for(var i=0; i<aH2.length; i++){
         aH2[i].index = i;
-        aH2[i].flag = false;
+        aH2[i].flag = true; //true 代表隐藏  false 代表显示
         aH2[i].onclick = function(){
             if(this.flag){
-                aUl[this.index].style.display = 'none';
-                this.flag = false;
-            }else{
                 aUl[this.index].style.display = 'block';
-                this.flag = true;
+            }else{
+                aUl[this.index].style.display = 'none';
             }
+            this.flag = !this.flag;
         }
     }
-
-
 
 
 </script>

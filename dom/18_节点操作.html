@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="div1">
+        div1111111
+        <span id="span1">aaaaa</span>
+    </div>
+    <button id="btn">click</button>
+    <!--<div id="div2">
+        div2222
+
+    </div>-->
+    <script>
+    /*    var oDiv = document.getElementById('div1');
+        var oDiv2 = document.getElementById('div2');
+        var oSpan = document.createElement('span');
+        oSpan.innerHTML = 'haha';
+
+        oDiv.appendChild(oSpan);
+
+        var oDiv1 = oDiv.cloneNode(true);
+        oDiv2.appendChild(oDiv1);*/
+
+        var oBtn = document.getElementById('btn');
+
+    oBtn.onclick = function(){
+        var oDiv = document.getElementById('div1');
+//        oDiv.index = 10;
+//
+//        console.log(oDiv.index);
+//
+        oDiv.setAttribute('index',20);
+        console.log(oDiv.getAttribute('index'));
+       /* oSpan = document.getElementById('span1');
+        var oH1 = document.createElement('h1');
+        oH1.innerHTML = '++++++';
+
+//        oDiv.removeChild(oSpan);
+
+//        oDiv.replaceChild(oH1,oSpan);
+        oDiv.insertBefore(oH1,oSpan);*/
+
+    }
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
