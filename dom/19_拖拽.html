@@ -27,9 +27,13 @@
         oDiv.onmousedown = function(e){
             var disX = e.clientX - oDiv.offsetLeft;
             var disY = e.clientY - oDiv.offsetTop;
-            oDiv.onmousemove = function(e){
+            document.onmousemove = function(e){
 
                 oDiv.style.left = e.clientX - disX +"px";
+                oDiv.style.top = e.clientY - disY +"px";
+            }
+            oDiv.onmouseup = function(e){
+                document.onmousemove = null;
             }
         }
 
