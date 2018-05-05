@@ -37,6 +37,9 @@
               e.stopPropagation(); //阻止冒泡标准
               e.cancelBubble = true;//阻止冒泡ie
 
+              e.preventDefault();   //阻止默认行为标准
+              e.returnValue = false;//阻止默认行为ie
+
         };
         oDiv2.onclick = function(){
             console.log('div2');
