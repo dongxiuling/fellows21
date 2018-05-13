@@ -55,6 +55,7 @@
         },false);
         oDiv3.addEventListener('click',function(e){
             e.stopPropagation();
+            e.cancelable = true;
             console.log('div3冒泡');
         },false);
 
