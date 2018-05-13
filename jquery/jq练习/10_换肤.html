@@ -32,16 +32,16 @@
         li:nth-child(1).active{
             background-position:0 -15px ;
         }
-        li:nth-child(2){
+        li:nth-child(6){
             background-position: -20px 0;
         }
-        li:nth-child(2).active{
+        li:nth-child(6).active{
             background-position:-20px -15px ;
         }
-        li:nth-child(3){
+        li:nth-child(5){
             background-position: -40px 0;
         }
-        li:nth-child(3).active{
+        li:nth-child(5).active{
             background-position:-40px -15px ;
         }
         li:nth-child(4){
@@ -50,16 +50,16 @@
         li:nth-child(4).active{
             background-position:-60px -15px ;
         }
-        li:nth-child(5){
+        li:nth-child(3){
             background-position: -80px 0;
         }
-        li:nth-child(5).active{
+        li:nth-child(3).active{
             background-position:-80px -15px ;
         }
-        li:nth-child(6){
+        li:nth-child(2){
             background-position: -100px 0;
         }
-        li:nth-child(6).active{
+        li:nth-child(2).active{
             background-position:-100px -15px ;
         }
         .news{
@@ -111,8 +111,10 @@
     </div>
     <script src="../jquery-1.12.4.js"></script>
     <script>
-
-
+        $('li').on('click',function(){
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.news').attr('class','news skin'+$(this).index());
+        });
 
 
 
