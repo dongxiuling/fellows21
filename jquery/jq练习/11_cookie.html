@@ -51,8 +51,13 @@
     }
 
 //   [" age", "20"] 'age'== ' age'
-   console.log(  getCookie('age')   );
+    console.log(  getCookie('age')   );
 
+    function removeCookie(key){
+        setCookie(key,'',-1);
+    }
+
+    removeCookie('age');
 
 
 

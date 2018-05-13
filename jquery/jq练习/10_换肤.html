@@ -110,11 +110,22 @@
 
     </div>
     <script src="../jquery-1.12.4.js"></script>
+    <script src="cookie.js"></script>
     <script>
+
         $('li').on('click',function(){
             $(this).addClass('active').siblings().removeClass('active');
             $('.news').attr('class','news skin'+$(this).index());
+            setCookie('skin',$(this).index(),7);
         });
+
+        var index = getCookie('skin');
+
+        $('li').eq(index).trigger('click');
+
+
+
+
 
 
 
