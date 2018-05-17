@@ -31,6 +31,33 @@ function change(idx){
 
 
 
+/*最新动态开始*/
+    var $title = '';
+
+    $('#jnNoticeInfo li a').on('mouseover',function(e){
+        //$title = $(this).attr('title');
+        this.myTitle = $(this).attr('title');
+        $('<div class="tip">'+this.myTitle+'</div>').appendTo('body').offset({
+            left:e.pageX +20,
+            top:e.pageY+20
+        });
+        $(this).attr('title','');
+    }).on('mousemove',function(e){
+        $('.tip').offset({
+            left:e.pageX +20,
+            top:e.pageY+20
+        });
+    }).on('mouseout',function(){
+        $('.tip').remove();
+        //$(this).attr('title',$title);
+        $(this).attr('title',this.myTitle);
+
+    });
+
+
+
+
+/*最新动态结束*/
 
 
 
