@@ -8,11 +8,11 @@
     <div id="div1">dxfcgjhkll</div>
 
 
-    <!--$('#div1').on('click')-->
+    jq最核心的是$,他是一个函数.函数中返回一个自定义的jq对象,她是一个类,在这个类的原形下有许多jq自定义的方法.每次调用$返回一个新的jq对象,同时在Jquery类中根据传入参数的类型,函数或者字符串.
+    // 把选中的元素存在数组中,遍历这个数组,取出每个元素进行dom操作.
+    // 在每一个方法中,return this,this就是在$函数中返回的jq对象..链式操作
 
-    document.getElementById('div1')
 
-    $('#div1')
 
 
     <script>
@@ -38,17 +38,24 @@
         }
 
         Jquery.prototype.css = function(attr,val){
-            if(typeof attr == 'string' && typeof val == 'string'){
-                for(var i=0; i<this.elements.length; i++){
+            for(var i=0; i<this.elements.length; i++){
+//                this.elements[i]
+                if(typeof attr == 'string' && typeof val == 'string'){
                     this.elements[i].style[attr] = val;
-                }
-            }else if(typeof attr == 'object' && !val){
-                for(var i=0; i<this.elements.length; i++){
+                }else if(typeof attr == 'object' && typeof val == 'undefined'){
                     for(key in attr){
                         this.elements[i].style[key] = attr[key];
                     }
                 }
             }
+            return this;
+        };
+
+        Jquery.prototype.on = function(type,fn){
+            for(var i=0; i<this.elements.length; i++){
+                this.elements[i].addEventListener(type,fn,false);
+            }
+            return this;
         };
 
 
@@ -59,18 +66,21 @@
 
 
 
-        $('#div1').css('background','red');
+
+//        $('#div1').css('background','red');
         $('#div1').css({
-            width:30,
-            height:50
+            width:'300px',
+            height:'400px',
+            background:'red'
+        }).on('click',function(){
+            alert('111');
         });
 
-        $('.aa');
 
-        $(function(){
+     /*   $(function(){
             console.log(2222);
         })
-
+*/
 
 
 
