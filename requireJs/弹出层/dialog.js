@@ -22,10 +22,14 @@ define(function(){
                 height:obj.height
             });
             $('.dialog-title h2').html(obj.title);
-
+            $('.dialog-content').load(obj.content);
+            $('.dialog-close').on('click',function(){
+                $('.dialog-mask').remove();
+            });
 
         },
         close:function(){
+            $('.dialog-mask').remove();
 
         }
 

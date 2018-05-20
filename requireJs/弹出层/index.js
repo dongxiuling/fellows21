@@ -14,7 +14,11 @@ require(['jquery','dialog'],function($,dialog){
         dialog.open({
             width:300,
             height:300,
-            title:'登录'
+            title:'登录',
+            content:'text.html'
+        });
+        $('body').on('click','.confirm-btn',function(){
+            dialog.close();
         });
 
     });
