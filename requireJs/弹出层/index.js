@@ -7,19 +7,44 @@ requirejs.config({
     }
 });
 
-require(['jquery','dialog'],function($,dialog){
+require(['jquery','dialog1'],function($,Dialog){
 
     $('#btn').on('click',function(){
+        var dialog1 = new Dialog({
+            width:300,
+            height:300,
+            title:'登录',
+            content:'text.html'
+        });
 
-        dialog.open({
+        dialog1.open();
+
+        $('body').on('click','.confirm-btn',function(){
+            var dialog2 = new Dialog({
+                width:200,
+                height:100,
+                title:'请输入用户名',
+                content:'username.html'
+            });
+            dialog2.open();
+        });
+
+
+        /*dialog.open({
             width:300,
             height:300,
             title:'登录',
             content:'text.html'
         });
         $('body').on('click','.confirm-btn',function(){
-            dialog.close();
-        });
+            //dialog.close();
+            dialog.open({
+                width:200,
+                height:100,
+                title:'请输入用户名',
+                content:'username.html'
+            });
+        });*/
 
     });
 

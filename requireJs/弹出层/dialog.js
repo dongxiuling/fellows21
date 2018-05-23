@@ -4,8 +4,6 @@
 define(function(){
 
     var dialog = {
-
-
         open:function(obj){
            var html = '<div class="dialog-mask">'
                            +'<div class="dialog-box">'
@@ -17,6 +15,7 @@ define(function(){
                            +'</div>'
                        +'</div>';
             $('body').append(html);
+
             $('.dialog-box').css({
                 width:obj.width,
                 height:obj.height
@@ -26,11 +25,9 @@ define(function(){
             $('.dialog-close').on('click',function(){
                 $('.dialog-mask').remove();
             });
-
         },
         close:function(){
             $('.dialog-mask').remove();
-
         }
 
 
