@@ -37,13 +37,28 @@ li{
 #tab li.selected{
     background: orange;
 }
-#prev{
+#prev,#next{
     position: absolute;
+}
+.prev-buttom{
     left:20px;
     bottom: 10px;
 }
-#next{
-    position: absolute;
+.next-buttom{
     left:50px;
     bottom: 10px;
 }
+.prev-center{
+    left:20px;
+    top: 50%;
+    margin-top: -10px;
+}
+.next-center{
+    right:20px;
+    top: 50%;
+    margin-top: -10px;
+}
+.tab-circle{
+    border-radius: 50%;
+}
+
