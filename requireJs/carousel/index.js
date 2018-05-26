@@ -13,5 +13,12 @@ require(['carousel'],function(Carousel){
 
     });
 
+    var carousel1 = new Carousel();
+
+    carousel1.init({
+        selector:'#box1',
+        imgData:['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg'],
+    });
+
 
 });

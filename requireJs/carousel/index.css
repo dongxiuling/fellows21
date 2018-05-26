@@ -5,25 +5,25 @@
 li{
     list-style: none;
 }
-#container{
+.container{
     width: 680px;
     height: 344px;
     margin: 0 auto;
     position: relative;
 }
-#container img{
+.container img{
     position: absolute;
     display: none;
 }
-#container img.selected{
+.container img.selected{
     display: block;
 }
-#tab{
+.tab{
     position: absolute;
     right:20px;
     bottom: 10px;
 }
-#tab li,#prev,#next{
+.tab li,.prev,.next{
     float: left;
     width: 20px;
     height: 20px;
@@ -34,10 +34,10 @@ li{
     cursor: pointer;
     margin-right: 10px;
 }
-#tab li.selected{
+.tab li.selected{
     background: orange;
 }
-#prev,#next{
+.prev,.next{
     position: absolute;
 }
 .prev-buttom{
