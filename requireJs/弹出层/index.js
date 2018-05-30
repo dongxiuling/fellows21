@@ -18,9 +18,6 @@ require(['jquery','dialog1'],function($,Dialog){
         });
 
         dialog1.open();
-
-
-
     });
 
     $('body').on('click','.confirm-btn',function(){

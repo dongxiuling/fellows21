@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .header{
+            height: 120px;
+            /*background: #ff0000;*/
+
+        }
+        .wrapper{
+            width: 1002px;
+            margin:0 auto;
+            background: #ff0000;
+            /*overflow: hidden;*/
+        }
+        .header-logo{
+            margin-top:25px;
+            float: left;
+        }
+        .header-nav{
+            margin-top:53px;
+            float: left;
+        }
+        .header-nav li{
+            float: left;
+            padding: 0 25px;
+            position: relative;
+
+        }
+        .header-nav li a{
+            color: #626262;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .header-nav li::after{
+            content: '';
+            width: 1px;
+            height: 14px;
+            background: #6b6b6b;
+            position: absolute;
+            right: 0px;
+            top:5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="wrapper">
+            <a href="#" class="header-logo">
+                <img src="images/logo.png" alt=""/>
+            </a>
+            <ul class="header-nav">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Works</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact Us </a></li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+</html>
