@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        li:nth-child(0){
+            background: #ff0000;
+        }
+        /*li:nth-child(2n){color:#f00;} /!* 偶数 *!/*/
+        li:nth-child(2n+1){color:#f00;} /* 奇数 */
+
+        #div1::first-letter{
+           color: #f00;
+        }
+        #div1::after{
+            content: '哈哈';
+        }
+    </style>
+</head>
+<body>
+
+
+
+<ul>
+    <li>列表项一</li>
+    <li>列表项二</li>
+    <li>列表项三</li>
+    <li>列表项四</li>
+</ul>
+<div id="div1">aaa</div>
+</body>
+</html>
