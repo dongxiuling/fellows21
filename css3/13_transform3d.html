@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .div1{
+            width: 200px;
+            height: 200px;
+            border:2px dashed #000;
+            margin:50px auto;
+           -webkit-perspective: 800px;
+        }
+        .div2{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            /*transform: rotateX(-30deg);*/
+            /*transform: rotateY(30deg);*/
+            /*transform: rotateZ(30deg);*/
+            /*transform: translateZ(-100px);*/
+            transform:scaleY(0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2"></div>
+    </div>
+
+</body>
+</html>
