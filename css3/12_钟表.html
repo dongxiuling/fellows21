@@ -90,14 +90,22 @@
         }
         oUl.innerHTML = str;
 
-        var date = new Date();
-        var iHour = date.getHours();
-        var iMinute = date.getMinutes();
-        var iSecond = date.getSeconds();
+        function run(){
+            var date = new Date();
+            var iHour = date.getHours();
+            var iMinute = date.getMinutes();
+            var iSecond = date.getSeconds();
 
-        oHour.style.webkitTransform = 'rotate('+ (iHour*30 + iMinute*0.5) +'deg)';
-        oMinute.style.webkitTransform = 'rotate('+ (iMinute*6 + iSecond*0.1) +'deg)';
-        oSecond.style.webkitTransform = 'rotate('+ (iSecond*6) +'deg)';
+            oHour.style.webkitTransform = 'rotate('+ (iHour*30 + iMinute*0.5) +'deg)';
+            oMinute.style.webkitTransform = 'rotate('+ (iMinute*6 + iSecond*0.1) +'deg)';
+            oSecond.style.webkitTransform = 'rotate('+ (iSecond*6) +'deg)';
+        }
+        run();
+
+        setInterval(function(){
+            run();
+        },1000)
+
 
 
 
