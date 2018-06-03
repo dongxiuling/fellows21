@@ -10,6 +10,7 @@
         }
         body{
             background: #000;
+            perspective: 800px;
         }
 
         #container{
@@ -18,7 +19,14 @@
             margin:50px auto;
             /*background: #ff0000;*/
             position: relative;
-            perspective: 800px;
+            -webkit-transform-style: preserve-3d;
+            -webkit-animation: run 2s linear infinite ;
+        }
+        @keyframes run {
+            0%{}
+            100%{
+                -webkit-transform: rotateY(360deg);
+            }
         }
         #container div{
             width: 200px;
