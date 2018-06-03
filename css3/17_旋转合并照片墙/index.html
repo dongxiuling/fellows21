@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+           height: 100%;
+        }
+        #container{
+            height: 100%;
+            background: #999   ;
+        }
+        .img{
+            width: 125px;
+            height: 125px;
+            border:5px solid #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+
+
+    </div>
+    <script>
+        var oContainer = document.getElementById('container');
+        var count = 0;
+        for(var i=0; i<24; i++){
+            var oImg = new Image();
+            oImg.onload = function(){
+                count++;
+                if(count == 48){
+                    loadSuccess();
+                }
+            };
+            oImg.src = 'img/thumbs/'+(i+1)+'.jpg';
+        }
+        for(var i=0; i<24; i++){
+            var oImg = new Image();
+            oImg.onload = function(){
+                count++;
+                if(count == 48){
+                    loadSuccess();
+                }
+            };
+            oImg.src = 'img/'+(i+1)+'.jpg';
+        }
+
+        var index = 0;
+        function loadSuccess(){
+            for(var i=0; i<4; i++){ //行
+                for(j=0; j<6;j++){  //列
+                    index++;
+                    var oDiv = document.createElement('div');
+                    oDiv.className = 'img';
+                    oDiv.style.background = 'url(img/thumbs/'+index+'.jpg)';
+                    oContainer.appendChild(oDiv);
+                }
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
