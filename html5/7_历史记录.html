@@ -44,6 +44,22 @@
     </div>
     <script src="../jquery/jquery-1.12.4.js"></script>
     <script>
+        $('a').on('click',function(){
+            var scrollTop = $( $(this).attr('href')).offset().top;
+
+            $('html,body').animate({
+                scrollTop:scrollTop
+            });
+            history.pushState(scrollTop,'');
+            return false;
+        });
+
+        window.onpopstate = function(e){
+            var scrollTop = e.state;
+            $('html,body').animate({
+                scrollTop:scrollTop
+            });
+        }
 
 
 
