@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h2{
+    width: 960px;
+    height: 100px;
+    margin:50px auto 0;
+    background: #cccccc;
+    text-align: center;
+    line-height: 100px;
+}
+.img-box{
+    width: 960px;
+    background: url("../img/01.jpg") no-repeat;
+    background-size: 960px 539px;
+    height: 539px;
+    margin:50px auto 0;
+}
+.content{
+    width: 960px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.left{
+    width: 630px;
+    background: #ff0000;
+    height: 300px;
+    float: left;
+    display: table;
+}
+.right{
+    width: 300px;
+    background: #0000ff;
+    height: 300px;
+    float: right;
+}
+.left p{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+@media screen and (max-width: 960px){
+    h2{
+        width:100%;
+    }
+    .img-box{
+        width:100%;
+        background-image: url(../img/01_s_2x.jpg);
+        background-size: 100% ;
+       /* padding-top: 56%;
+        height: 0px;*/
+        height:56vw;
+    }
+    .content{
+        width: 100%;
+    }
+    .left{
+        width: 66%;
+    }
+    .right{
+        width: 31%;
+    }
+
+    /*图片  960  540*/
+
+
+
+
+
+
+}
+
+
+@media screen and (max-width: 480px){
+    .left{
+        width:100%;
+        float: none;
+    }
+    .right{
+        width: 100%;
+        float: none;
+    }
+}
