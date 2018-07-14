@@ -42,8 +42,9 @@ h2{
     background: #0000ff;
     height: 300px;
     float: right;
+    display: table;
 }
-.left p{
+.left p,.right p{
     display: table-cell;
     vertical-align: middle;
     text-align: center;

@@ -1,0 +1,51 @@
+html,body{
+    height: 100%;
+}
+.container{
+    height: 100%;
+}
+.nav{
+    width: 30%;
+    height: 100%;
+    background: #ff0000;
+    position: fixed;
+    top:0;
+    left:0;
+}
+.nav-head{
+    padding: 24px;
+}
+.head-logo img{
+    width: 36px;
+    height: 36px;
+}
+.head-list li{
+    float: left;
+    padding: 5px 10px;
+}
+.head-menu{
+    width: 24px;
+    height: 24px;
+}
+.head-logo,.head-list{
+    float: left;
+}
+.head-menu{
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+.content{
+    width: 70%;
+    height: 800px;
+    background: #0000ff;
+    float: right;
+
+}
